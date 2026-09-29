@@ -1,0 +1,109 @@
+<!DOCTYPE HTML>
+<html lang="en">
+    <head role="banner">
+        <meta charset="utf-8">
+        <title>Grading</title>
+        <h1>Grading your cards</h1>
+        <link href="css/styles.css" rel="stylesheet" type="text/css">
+
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="topps.html">All about Topps</a></li>
+                <li><a href="panini.html">All about Panini</a></li>
+                <li><a href="grading.html">grading Info</a></li>
+            </ul>
+        </nav>
+    </head>
+    <body>
+        <br>
+        <p class="center"> 
+            Grading your cards is a long process, PSA specifically cane take
+            months to fulfil your order's and yet they stand as the highesst
+            trusted company to grade cards, which is evident in the surge in 
+            price of a card which is graded highly.
+        </p>
+        <hr>
+        <img src="images/espeon-ex-png.png" alt="espeon card" style="
+        float: left; 
+        margin-right: 20px; 
+        margin-bottom: 10px; 
+        width: 250px; 
+        height: auto; 
+        border-radius: 8px;">
+        <p class="center">
+            Take this <ruby>エーフィ<rp>(</rp><rt>Espeon</rt><rp>)</rp> </ruby> EX card. 
+            At base value, this card is worth <del>$60</del> However when graded with PSA
+            The cards value jumps to over $150! around ~<ins>$180</ins>. a significant Jump
+            from its measly $60 price tag at base value.
+            <!-- Here ruby is used to show the english translation above the name which translated is espeon
+             allowing the original japanese which is on the card to be left on the page while also knowing the charcters name in english
+             
+             Del is used here as well to strike out the old, ungrades price and ins is used to underline and "highlight" the new
+             and higher grades price-->
+        </p>
+        <hr>
+        <p class=".center">
+            Grading can take place online or in person. online the place you go is 
+            <a href="https://www.psacard.com">the PSA website</a>. Where you can go 
+            and submit cards for grading as well as other collectible items like comic books!
+        </p>
+        <hr>
+        <p class="center">
+            Another way you can grade your cards is in person. One of my personal favorites is 
+            going to <a href="burbankcards.com">Burbank Sports Cards</a> In burbank. They have
+            a dedicated section of the store soley to submit your cards for grading. I 
+            personally like this because it gets the aspect of protecting your card from shipping
+            out of your hands
+            <br>
+            <br>
+        </p>
+        <hr>
+        <p class="center"> you can find if burbank sports is open using this box!</p>
+        <form>
+            <label for="appointment">Check if Burbank Cardsis open:</label>
+            <input
+            type="time"
+            id="timeA"
+            name="appointment"
+            min="00:00"
+            max="24:00"
+            required 
+            oninput="updateLabelTime()"/>
+            <input type="reset" value="Reset the time" />
+            <label id="timeLabel"> Test Me!</label>
+            <script>
+                function updateLabelTime() {
+                const labelss = ["YES!", "no :("]
+                const time = document.getElementById('timeA');
+                const displayTime = document.getElementById('timeLabel');
+                if (time.value<"18:00"&&time.value>="10:00"){
+                    displayTime.textContent = labelss[0]
+                } else {
+                    displayTime.textContent = labelss[1]
+                }
+                }
+            </script>
+        </form>
+        <!-- here i use Reset and Time input types so the user can set a time and see whether or not the store is open -->
+        <hr>
+        <p>Use this to see the price of the card at different grades</p>
+        <form>
+            <input type="range" id="Grade" name="grade" min="0" max="10" oninput="updateLabel()"/>
+            <input type="reset" value="Reset the slider" />
+            <label id="labelText">Test me!</label>
+            <script>
+                const labels = ["Ungraded~$60", "PSA 1~$0", "PSA 2~$17", "PSA 3~$19", "PSA 4~$22", "PSA 5~$26", "PSA 6~$33", "PSA 7~$41", "PSA 8~$51", "PSA 9~$66", "PSA 10~$180"];
+
+                function updateLabel() {
+                    const slider = document.getElementById('Grade');
+                const display = document.getElementById('labelText');
+                display.textContent = labels[slider.value];
+                }
+            </script>
+        </form>
+        <!-- here the slider is used to select an input for the Grading scale and show the value of the card -->
+        <hr>
+
+    </body>
+</html>

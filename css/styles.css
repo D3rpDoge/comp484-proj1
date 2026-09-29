@@ -1,0 +1,55 @@
+body {
+  background-color: grey;
+}
+h1 {
+  color: wheat;
+  text-align: center;
+}
+h2 {
+  color: wheat;
+  text-align: center;
+}
+p {
+  color: wheat;
+}
+nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+        nav li {
+            display: inline;
+            margin-right: 20px;
+            text-align: center;
+        }
+        nav a {
+            text-decoration: none;
+            color: black; 
+            font-weight: bold;
+        }
+        nav a:hover {
+            color: wheat;
+        }
+.center {
+  text-align: center;
+  padding-left: 20%;
+  padding-right: 20%;
+}
+del::before,
+del::after {
+  clip-path: inset(100%);
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+del::before {
+  content: " [deletion start] ";
+}
+
+del::after {
+  content: " [deletion end] ";
+}
